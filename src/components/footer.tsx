@@ -1,5 +1,4 @@
-import { Facebook, Twitter, Linkedin, Github, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Facebook, Mail, Linkedin, Github } from "lucide-react";
 
 function TelegramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -44,7 +43,7 @@ function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="border-t bg-background">
+    <footer id="contact" className="border-t bg-background">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
@@ -60,7 +59,8 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">Data2Insight</a></li>
                 <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">Business Analyst</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">AI Agent /Automation</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">AI/ML Solution</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">Content Creator</a></li>
               </ul>
             </div>
             <div>

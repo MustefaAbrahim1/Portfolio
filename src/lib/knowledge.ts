@@ -1,17 +1,11 @@
 export const knowledgeBase = `
 # About Me
-👋 Hi, I'm Mustefa Abrahim!
-M.Tech Data Science @ IIT Madras (2024 Batch) | B.Tech (Honor) CSE @ KIIT (2022 Batch) | AI Researcher| DL Engineer | ML Engineer | Data Analyst | Islamic Young Motivator Building the Future with AI, One Model at a Time.
+👋 Hi, I'm Mustefa Abrahim! I'm a Data Scientist, AI Engineer, Business Analyst, Data Analyst, AI Agent Developer, and AI Research Enthusiastic. I have an M.Tech in Data Science from IIT Madras (2024) and a B.Tech (Honor) in CSE from KIIT (2022). My motto is "Building the Future with AI, One Model at a Time."
 
-I'm a data scientist and AI researcher with an M.Tech in Data Science and a B.Tech (Honor) in Computer Science.
-My passion lies at the intersection of:
-
-🤖 Machine Learning & Deep Learning
-🧠 Natural Language Processing (NLP)
-🧬 Computer Vision
-🏥 AI for Healthcare
-💼 Business Intelligence & Analytics
-💼 Data Scientist and Analytics
+# Education
+- Master Degree in Data Science and AI from IIT Madras, India (2022 – 2024)
+- Bachelor Degree (honour) in Computer science from KIIT, India (2018 – 2022)
+- Bachelor in Software Engineering from Jigjiga University, Ethiopia (2016-2017)
 
 # Research Interests
 - Transfer Learning & Representation Learning
@@ -21,46 +15,35 @@ My passion lies at the intersection of:
 - NLP models like BERT, GPT, and beyond
 - AI for Medical Imaging & Healthcare Systems
 
-# Tech Stack
-- **Programming Languages:** Python, Java, C++, JavaScript, SQL, HTML5, CSS3, PHP, JSON
-- **DL, ML & NLP:** PyTorch, TensorFlow, JAX, spaCy, NLTK, scikit-learn, XGBoost, LightGBM
-- **Web Dev:** Django, Flask, Node.js, ExpressJS, React Native, jQuery, Bootstrap
-- **Data Science & Visualization:** Pandas, NumPy, Matplotlib, Seaborn, Plotly, Tableau, Power BI, SPSS
-- **Databases & Big Data:** MongoDB, MySQL, Hadoop, Apache Spark, Kafka
-- **Experiment Tracking & ML Tooling:** Weights & Biases, MLflow, DVC
-- **Cloud, DevOps & Version Control:** GCP, Git, Git LFS
+# Work / Professional Experience
+1.  **Business Data Analyst** - FINCRUX Technologies LLP, India (June 2023 – July 2023)
+2.  **Data Analysis and Visualization** - RBCDSAI Lab IIT Madras, India (June 2023 – Sept 2023)
+3.  **Energy Mentors** - Energy Mentors, USA, and IIT Ropar India (May 2023 – July 2023)
+4.  **Credit Card Fraud Detection** - CodeClause, India (Jun 2023 – July 2023)
+5.  **Software Development Intern** - Internshala, India (May 2021 - June 2021)
+6.  **Web Development Intern** - Internshala, India (Sept 2019 - Nov 2019)
 
-# Work Experience and Projects
+# Project / Research Works
 
-## Machine Learning (ML)
-- **Project:** Customer Churn Prediction Using ML
-- **Description:** Built an end-to-end classification pipeline using Random Forest and XGBoost to predict customer churn. Performed feature engineering, hyperparameter tuning, and model evaluation (AUC: 0.87).
-- **Tech Stack:** Python, Scikit-learn, XGBoost, Matplotlib
+## ML Projects
+- **Stock Market Data Analysis Using ML Algorithms** (Feb 2022 - May 2023)
+- **Predictive Analytics for Health Insurance Sales using ML** (Jan 2023 - March 2023)
+- **Credit Card Fraud Detection using ML Algorithm**
 
-## Deep Learning (DL)
-- **Project:** Diabetic Retinopathy Detection
-- **Description:** Developed a CNN-based image classifier using transfer learning (EfficientNetB3) to detect diabetic retinopathy from fundus images. Achieved >90% validation accuracy using data augmentation and test-time ensemble.
-- **Tech Stack:** Python, TensorFlow, Keras, OpenCV
+## DL Projects
+- **Covid-19 Detection using DL from Radiological Images** (Jan 2021 - June 2022)
+- **Kidney Stone Detection using DL from CT-scan Images** (June 2023 - June 2024)
+- **Image2Image Translation using CGAN, CycleGAN**
+- **Realistic Image Generation using Diffusion Models**
 
-## Natural Language Processing (NLP)
-- **Project:** Text Sentiment Analyzer (YouTube Comments)
-- **Description:** Built a sentiment classification model for YouTube comments using DistilBERT. Includes text preprocessing, fine-tuning, and Streamlit-based deployment.
-- **Tech Stack:** Python, Hugging Face Transformers, Streamlit, NLTK
+## Big Data Projects
+- **Big Data Project – NYC Parking Tickets Prediction** (Feb 2023 - May 2023)
 
-## Business Intelligence / Dashboards
-- **Project:** Sales Dashboard with Insights
-- **Description:** Designed a dynamic Power BI dashboard that visualizes sales trends, profit margins, and customer demographics. Integrated SQL backend and Excel datasets.
-- **Tech Stack:** Power BI, SQL, Excel
-
-## Big Data & Distributed Systems
-- **Project:** Real-Time Log Analytics with Spark & Kafka
-- **Description:** Developed a real-time analytics pipeline using Apache Kafka + Spark Streaming to monitor web server logs. Deployed on GCP with alerting system integration.
-- **Tech Stack:** Apache Kafka, Spark, PySpark, GCP
-
-# Current Focus
-- Developing state-of-the-art AI models for medical image analysis
-- Exploring LLMs for clinical NLP and decision support
-- Building real-world AI tools for creators, like the AI Content Idea Generator
+## NLP Projects
+- **Information Retrieval System from Scratch** (March 2024 - May 2024)
+- **Customization of AI-Content Generation for Social Media Influencer** (June 2025 - Aug 2025)
+- **Retrieval-Augmented Generation (RAG)**
+- **Sentiment Analysis**
 
 # Publications
 - **Title:** Exploring the Impact of AI on Kidney Stone Detection — A Comprehensive Review
@@ -68,6 +51,22 @@ My passion lies at the intersection of:
 - **Status:** Under Review
 
 # Certificates
-- Google Data Analytics Specialization
-- Natural Language Processing on Udemy
+- **Google data analysis professional** from Coursera (Jun 2022)
+- **AI for everyone** from DeepLearning.AI (Aug 2021)
+- **Core Java (Software Development using JavaFX)** from Internshala (June 2021)
+- **Entrepreneurship I & II** from Coursera (Aug & Sept 2021)
+- **Machine Learning Foundations** from Coursera (Dec 2020)
+- **Web Development** from Internshala (Nov 2019)
+
+# Success Stories
+- Double Scholar, holding an honour degree.
+- Betra Science Scholar from Jigjiga University to KIIT University.
+- Achieved Honor Degree in Computer Science with highest CGPA 3.84/4 from KIIT.
+- I2MP Scholar at IIT Madras (India's #1 NIRF ranked university).
+
+# Services I Offer
+- Data2Insight
+- AI/ML Solutions
+- Business Analysis
+- Content Creation
 `;

@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <div className="flex-grow">
+      <main className="flex-grow">
         <PageClient />
-      </div>
+      </main>
       <Chatbot />
       <Footer />
     </div>

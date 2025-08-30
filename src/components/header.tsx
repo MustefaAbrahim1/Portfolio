@@ -1,6 +1,5 @@
-import { Search, Github, Linkedin } from "lucide-react";
+import { Search } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function Header() {
@@ -17,6 +16,7 @@ export default function Header() {
           <a href="#research" className="text-foreground/80 hover:text-foreground transition-colors">Research</a>
           <a href="#publications" className="text-foreground/80 hover:text-foreground transition-colors">Publication</a>
           <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
+          <a href="#resume" className="text-foreground/80 hover:text-foreground transition-colors">Resume</a>
         </nav>
         <div className="flex items-center gap-4">
           <div className="relative hidden sm:block">
