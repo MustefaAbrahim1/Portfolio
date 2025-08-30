@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { GraduationCap, Briefcase, Award, BookOpen, GitBranch, Cpu, Database, BrainCircuit, Bot, BarChart, FileText, CheckCircle, Handshake, Brain, BriefcaseBusiness, TrendingUp, UserCog, Rocket } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 const AnimatedText = () => {
   const roles = [
@@ -94,12 +95,12 @@ const projects = {
 };
 
 const experiences = [
-    { role: "Business Data Analyst", company: "FINCRUX Technologies LLP, India", period: "June 05, 2023 – July 05, 2023" },
-    { role: "Data Analysis and Visualization", company: "RBCDSAI Lab IIT Madras, India", period: "June 1, 2023 – Sept 30, 2023" },
-    { role: "Energy Mentors", company: "Energy Mentors, USA, and IIT Ropar India", period: "May 21, 2023 – July 24, 2023" },
-    { role: "Credit Card Fraud Detection", company: "CodeClause, India", period: "Jun 2023 – July 2023" },
-    { role: "Software Development Intern", company: "Internshala, India", period: "May 2021 - June 2021" },
-    { role: "Web Development Intern", company: "Internshala, India", period: "Sept 2019 - Nov 2019" },
+    { role: "Business Data Analyst", company: "FINCRUX Technologies LLP, India", period: "June 05, 2023 – July 05, 2023", imageUrl: "https://picsum.photos/100/100?random=14", imageHint: "business data" },
+    { role: "Data Analysis and Visualization", company: "RBCDSAI Lab IIT Madras, India", period: "June 1, 2023 – Sept 30, 2023", imageUrl: "https://picsum.photos/100/100?random=15", imageHint: "data visualization" },
+    { role: "Energy Mentors", company: "Energy Mentors, USA, and IIT Ropar India", period: "May 21, 2023 – July 24, 2023", imageUrl: "https://picsum.photos/100/100?random=16", imageHint: "energy analytics" },
+    { role: "Credit Card Fraud Detection", company: "CodeClause, India", period: "Jun 2023 – July 2023", imageUrl: "https://picsum.photos/100/100?random=17", imageHint: "fraud detection" },
+    { role: "Software Development Intern", company: "Internshala, India", period: "May 2021 - June 2021", imageUrl: "https://picsum.photos/100/100?random=18", imageHint: "software development" },
+    { role: "Web Development Intern", company: "Internshala, India", period: "Sept 2019 - Nov 2019", imageUrl: "https://picsum.photos/100/100?random=19", imageHint: "web development" },
 ];
 
 const educations = [
@@ -234,7 +235,9 @@ export default function PageClient() {
                 transition={{ duration: 0.8 }}
               >
                   <div className="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary group-odd:order-1 group-odd:group-first:translate-x-1/2 group-odd:group-last:translate-x-1/2 md:group-odd:order-none">
-                     <Briefcase className="w-5 h-5" />
+                     <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                        <Image src={exp.imageUrl} alt={exp.role} fill className="object-cover" data-ai-hint={exp.imageHint} />
+                     </div>
                   </div>
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
                       <Card>
