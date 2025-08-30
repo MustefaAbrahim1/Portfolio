@@ -73,34 +73,34 @@ const researchInterests = [
 
 const projects = {
   ml: [
-    { title: "Stock Market Data Analysis Using ML Algorithms", period: "Feb 2022 - May 2023", imageUrl: "https://picsum.photos/600/400?random=1", imageHint: "stock market analysis" },
-    { title: "Predictive Analytics for Health Insurance Sales using ML", period: "Jan 2023 - March 2023", imageUrl: "https://picsum.photos/600/400?random=2", imageHint: "health insurance predictive" },
-    { title: "Credit Card Fraud Detection using ML Algorithm", period: "Jun 2023 - July 2023", imageUrl: "https://picsum.photos/600/400?random=3", imageHint: "fraud detection security" },
+    { title: "Stock Market Data Analysis Using ML Algorithms", period: "Feb 2022 - May 2023", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "stock market analysis" },
+    { title: "Predictive Analytics for Health Insurance Sales using ML", period: "Jan 2023 - March 2023", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "health insurance predictive" },
+    { title: "Credit Card Fraud Detection using ML Algorithm", period: "Jun 2023 - July 2023", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "fraud detection security" },
   ],
   dl: [
-    { title: "Covid-19 Detection using DL from Radiological Images", period: "Jan 2021 - June 2022", imageUrl: "https://picsum.photos/600/400?random=5", imageHint: "covid detection medical" },
-    { title: "Kidney Stone Detection using DL from CT-scan Images", period: "June 2023 - June 2024", imageUrl: "https://picsum.photos/600/400?random=6", imageHint: "kidney stone detection" },
-    { title: "Image2Image Translation using CGAN, CycleGAN", period: "N/A", imageUrl: "https://picsum.photos/600/400?random=7", imageHint: "image translation gan" },
-    { title: "Realistic Image Generation using Diffusion", period: "N/A", imageUrl: "https://picsum.photos/600/400?random=8", imageHint: "image generation diffusion" },
+    { title: "Covid-19 Detection using DL from Radiological Images", period: "Jan 2021 - June 2022", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "covid detection medical" },
+    { title: "Kidney Stone Detection using DL from CT-scan Images", period: "June 2023 - June 2024", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "kidney stone detection" },
+    { title: "Image2Image Translation using CGAN, CycleGAN", period: "N/A", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "image translation gan" },
+    { title: "Realistic Image Generation using Diffusion", period: "N/A", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "image generation diffusion" },
   ],
   bigData: [
-    { title: "Big Data Project – NYC Parking Tickets Prediction", period: "Feb 2023 - May 2023", imageUrl: "https://picsum.photos/600/400?random=9", imageHint: "big data nyc" },
+    { title: "Big Data Project – NYC Parking Tickets Prediction", period: "Feb 2023 - May 2023", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "big data nyc" },
   ],
   nlp: [
-    { title: "Information Retrieval System from Scratch (NLP-Project-2024)", period: "March 2024 - May 2024", imageUrl: "https://picsum.photos/600/400?random=10", imageHint: "information retrieval nlp" },
-    { title: "Customization of AI-Content Generation for Social Media Influencer", period: "June 2025 - Aug 2025", imageUrl: "https://picsum.photos/600/400?random=11", imageHint: "ai content generation" },
-    { title: "Retrieval-Augmented Generation (RAG)", period: "N/A", imageUrl: "https://picsum.photos/600/400?random=12", imageHint: "rag system architecture" },
-    { title: "Sentiment Analysis", period: "N/A", imageUrl: "https://picsum.photos/600/400?random=13", imageHint: "sentiment analysis chart" },
+    { title: "Information Retrieval System from Scratch (NLP-Project-2024)", period: "March 2024 - May 2024", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "information retrieval nlp" },
+    { title: "Customization of AI-Content Generation for Social Media Influencer", period: "June 2025 - Aug 2025", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "ai content generation" },
+    { title: "Retrieval-Augmented Generation (RAG)", period: "N/A", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "rag system architecture" },
+    { title: "Sentiment Analysis", period: "N/A", imageUrl: "https://placehold.co/600x400/EEE/31343C", imageHint: "sentiment analysis chart" },
   ],
 };
 
 const experiences = [
-    { role: "Business Data Analyst", company: "FINCRUX Technologies LLP, India", period: "June 05, 2023 – July 05, 2023", imageUrl: "https://picsum.photos/100/100?random=14", imageHint: "business data" },
-    { role: "Data Analysis and Visualization", company: "RBCDSAI Lab IIT Madras, India", period: "June 1, 2023 – Sept 30, 2023", imageUrl: "https://picsum.photos/100/100?random=15", imageHint: "data visualization" },
-    { role: "Energy Mentors", company: "Energy Mentors, USA, and IIT Ropar India", period: "May 21, 2023 – July 24, 2023", imageUrl: "https://picsum.photos/100/100?random=16", imageHint: "energy analytics" },
-    { role: "Credit Card Fraud Detection", company: "CodeClause, India", period: "Jun 2023 – July 2023", imageUrl: "https://picsum.photos/100/100?random=17", imageHint: "fraud detection" },
-    { role: "Software Development Intern", company: "Internshala, India", period: "May 2021 - June 2021", imageUrl: "https://picsum.photos/100/100?random=18", imageHint: "software development" },
-    { role: "Web Development Intern", company: "Internshala, India", period: "Sept 2019 - Nov 2019", imageUrl: "https://picsum.photos/100/100?random=19", imageHint: "web development" },
+    { role: "Business Data Analyst", company: "FINCRUX Technologies LLP, India", period: "June 05, 2023 – July 05, 2023", imageUrl: "https://placehold.co/100x100/EEE/31343C", imageHint: "business data" },
+    { role: "Data Analysis and Visualization", company: "RBCDSAI Lab IIT Madras, India", period: "June 1, 2023 – Sept 30, 2023", imageUrl: "https://placehold.co/100x100/EEE/31343C", imageHint: "data visualization" },
+    { role: "Energy Mentors", company: "Energy Mentors, USA, and IIT Ropar India", period: "May 21, 2023 – July 24, 2023", imageUrl: "https://placehold.co/100x100/EEE/31343C", imageHint: "energy analytics" },
+    { role: "Credit Card Fraud Detection", company: "CodeClause, India", period: "Jun 2023 – July 2023", imageUrl: "https://placehold.co/100x100/EEE/31343C", imageHint: "fraud detection" },
+    { role: "Software Development Intern", company: "Internshala, India", period: "May 2021 - June 2021", imageUrl: "https://placehold.co/100x100/EEE/31343C", imageHint: "software development" },
+    { role: "Web Development Intern", company: "Internshala, India", period: "Sept 2019 - Nov 2019", imageUrl: "https://placehold.co/100x100/EEE/31343C", imageHint: "web development" },
 ];
 
 const educations = [
