@@ -13,15 +13,15 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, href: 'https://github.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/MustefaAbrahim1' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/mustefa-abrahim/' },
     { name: 'Twitter', icon: Twitter, href: '#' },
   ];
 
   const contactLinks = [
-    { name: 'Email', href: 'mailto:example@example.com' },
-    { name: 'LinkedIn', href: 'https://linkedin.com' },
-    { name: 'GitHub', href: 'https://github.com' },
+    { name: 'Email', href: 'mailto:mustefa.au@gmail.com' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mustefa-abrahim/' },
+    { name: 'GitHub', href: 'https://github.com/MustefaAbrahim1' },
   ];
 
   return (

@@ -13,10 +13,10 @@ export default function Resume() {
                 <h1 className="font-headline text-4xl font-bold">Mustefa Abrahim</h1>
                 <p className="text-lg text-muted-foreground">AI Researcher | DL/ML Engineer | Data Analyst</p>
                 <div className="flex justify-center gap-4 mt-4 text-sm">
-                    <a href="mailto:example@example.com" className="flex items-center gap-2 hover:text-primary"><Mail className="w-4 h-4"/> email@example.com</a>
+                    <a href="mailto:mustefa.au@gmail.com" className="flex items-center gap-2 hover:text-primary"><Mail className="w-4 h-4"/> mustefa.au@gmail.com</a>
                     <a href="#" className="flex items-center gap-2 hover:text-primary"><Phone className="w-4 h-4"/> +1 (123) 456-7890</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Linkedin className="w-4 h-4"/> LinkedIn</a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Github className="w-4 h-4"/> GitHub</a>
+                    <a href="https://www.linkedin.com/in/mustefa-abrahim/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Linkedin className="w-4 h-4"/> LinkedIn</a>
+                    <a href="https://github.com/MustefaAbrahim1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Github className="w-4 h-4"/> GitHub</a>
                 </div>
             </header>
 
