@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, Eye } from "lucide-react";
+import { Github, Eye, FileText } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -23,6 +23,7 @@ type ProjectCardProps = {
   tags: string[];
   liveLink?: string;
   sourceLink?: string;
+  paperLink?: string;
 };
 
 export default function ProjectCard({
@@ -33,11 +34,14 @@ export default function ProjectCard({
   tags,
   liveLink = "#",
   sourceLink = "#",
+  paperLink,
 }: ProjectCardProps) {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   }
+
+  const isResearch = tags.includes("Research");
 
   return (
     <motion.div
@@ -63,21 +67,28 @@ export default function ProjectCard({
         <CardContent className="flex-grow">
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Badge key={tag} variant="secondary">{tag}</Badge>
+              <Badge key={tag} variant={tag === 'Research' ? 'default' : 'secondary'}>{tag === 'Research' ? '📄 ' + tag : tag}</Badge>
             ))}
           </div>
         </CardContent>
-        <CardFooter className="flex items-center gap-4">
-          <Button asChild variant="outline" className="w-full">
+        <CardFooter className="flex items-center gap-2">
+          <Button asChild variant="outline" size="sm" className="flex-1">
             <Link href={sourceLink} target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" /> Code
             </Link>
           </Button>
-          <Button asChild variant="default" className="w-full">
+          <Button asChild variant="default" size="sm" className="flex-1">
             <Link href={liveLink} target="_blank" rel="noopener noreferrer">
               <Eye className="mr-2 h-4 w-4" /> Demo
             </Link>
           </Button>
+          {isResearch && paperLink && (
+            <Button asChild variant="secondary" size="sm" className="flex-1">
+              <Link href={paperLink} target="_blank" rel="noopener noreferrer">
+                <FileText className="mr-2 h-4 w-4" /> Paper
+              </Link>
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </motion.div>

@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const AnimatedText = () => {
   const roles = [
@@ -54,24 +55,124 @@ const researchInterests = [
 
 const projects = {
   ml: [
-    { title: "Stock Market Data Analysis Using ML Algorithms", period: "Feb 2022 - May 2023", imageUrl: "https://picsum.photos/600/400", imageHint: "stock market analysis", tags: ["Python", "Scikit-learn", "XGBoost"] },
-    { title: "Predictive Analytics for Health Insurance Sales using ML", period: "Jan 2023 - March 2023", imageUrl: "https://picsum.photos/600/401", imageHint: "health insurance predictive", tags: ["Machine Learning", "Classification"] },
-    { title: "Credit Card Fraud Detection using ML Algorithm", period: "Jun 2023 - July 2023", imageUrl: "https://picsum.photos/600/402", imageHint: "fraud detection security", tags: ["Fraud Detection", "ML"] },
+    { 
+      title: "Stock Market Data Analysis using ML Algorithms", 
+      period: "Feb 2022 – May 2023",
+      description: "Developed ML models to analyze and predict stock price trends. Applied regression, time series forecasting, and ensemble methods for performance improvement.", 
+      imageUrl: "https://picsum.photos/600/400", 
+      imageHint: "stock market analysis", 
+      tags: ["Python", "Pandas", "Scikit-learn", "Statsmodels"] 
+    },
+    { 
+      title: "Predictive Analytics for Health Insurance Sales", 
+      period: "Jan 2023 – Mar 2023", 
+      description: "Built predictive models for customer acquisition and sales forecasting. Identified key features driving insurance purchases.",
+      imageUrl: "https://picsum.photos/600/401", 
+      imageHint: "health insurance predictive", 
+      tags: ["Python", "Random Forest", "XGBoost", "Power BI"] 
+    },
+    { 
+      title: "Credit Card Fraud Detection using ML", 
+      period: "Jun 2023 – Jul 2024", 
+      description: "Designed ML pipelines to detect fraudulent transactions from imbalanced datasets. Achieved high recall and precision through feature engineering + resampling techniques.",
+      imageUrl: "https://picsum.photos/600/402", 
+      imageHint: "fraud detection security", 
+      tags: ["Python", "Scikit-learn", "Imbalanced-learn", "Flask", "Research"] 
+    },
   ],
   dl: [
-    { title: "Covid-19 Detection using DL from Radiological Images", period: "Jan 2021 - June 2022", imageUrl: "https://picsum.photos/600/403", imageHint: "covid detection medical", tags: ["Deep Learning", "Healthcare", "CNN"] },
-    { title: "Kidney Stone Detection using DL from CT-scan Images", period: "June 2023 - June 2024", imageUrl: "https://picsum.photos/600/404", imageHint: "kidney stone detection", tags: ["Computer Vision", "PyTorch"] },
-    { title: "Image2Image Translation using CGAN, CycleGAN", period: "N/A", imageUrl: "https://picsum.photos/600/405", imageHint: "image translation gan", tags: ["GANs", "Image Generation"] },
-    { title: "Realistic Image Generation using Diffusion", period: "N/A", imageUrl: "https://picsum.photos/600/406", imageHint: "image generation diffusion", tags: ["Diffusion Models", "AI Art"] },
+    { 
+      title: "Covid-19 Detection from Radiological Images", 
+      period: "Jan 2021 – Jun 2022",
+      description: "Built CNN models to classify X-ray/CT scans into Covid-positive/negative. Improved diagnosis support for radiologists with >85% accuracy.", 
+      imageUrl: "https://picsum.photos/600/403", 
+      imageHint: "covid detection medical", 
+      tags: ["Python", "TensorFlow", "Keras", "OpenCV", "Research"] 
+    },
+    { 
+      title: "Kidney Stone Detection from CT Scans", 
+      period: "Jun 2023 – Jun 2024", 
+      description: "Developed automated detection pipeline using CNN & image preprocessing. Achieved reliable classification for medical decision support.",
+      imageUrl: "https://picsum.photos/600/404", 
+      imageHint: "kidney stone detection", 
+      tags: ["Python", "TensorFlow", "Image Processing", "Research"] 
+    },
+    { 
+      title: "Image-to-Image Translation with GANs", 
+      period: "Nov 2023 – Dec 2024",
+      description: "Converted RGB → Thermal images using generative models (CycleGAN, cGAN). Enhanced computer vision applications in surveillance and medical imaging.", 
+      imageUrl: "https://picsum.photos/600/405", 
+      imageHint: "image translation gan", 
+      tags: ["PyTorch", "CycleGAN", "cGAN", "Research"] 
+    },
+    { 
+      title: "Realistic Image Generation using Diffusion Models", 
+      period: "Aug 2023 – Sept 2024",
+      description: "Trained diffusion models to generate realistic hair follicle images. Contributed to medical research dataset augmentation.", 
+      imageUrl: "https://picsum.photos/600/406", 
+      imageHint: "image generation diffusion", 
+      tags: ["PyTorch", "Diffusion Models", "Generative AI", "Research"] 
+    },
   ],
   bigData: [
-    { title: "Big Data Project – NYC Parking Tickets Prediction", period: "Feb 2023 - May 2023", imageUrl: "https://picsum.photos/600/407", imageHint: "big data nyc", tags: ["Big Data", "Spark", "PySpark"] },
+    { 
+      title: "NYC Parking Tickets Prediction", 
+      period: "Feb 2023 – May 2023",
+      description: "Processed 10M+ records to predict parking violations. Leveraged Spark ML pipelines for scalable predictions.",
+      imageUrl: "https://picsum.photos/600/407", 
+      imageHint: "big data nyc", 
+      tags: ["PySpark", "Hadoop", "Spark ML"] 
+    },
+     { 
+      title: "Hashing in Hadoop Distributed File System", 
+      period: "Jan 2023 – Feb 2023",
+      description: "Implemented efficient hashing techniques for data distribution. Optimized HDFS performance in large-scale data handling.",
+      imageUrl: "https://picsum.photos/600/412", 
+      imageHint: "hadoop distributed file", 
+      tags: ["Hadoop", "Java", "MapReduce"] 
+    },
+     { 
+      title: "Subscriber Data Management", 
+      period: "Nov 2023 – Dec 2023",
+      description: "Designed Big Data pipelines for telecom subscriber analytics. Handled ingestion, cleaning, and transformation for large-scale user datasets.",
+      imageUrl: "https://picsum.photos/600/413", 
+      imageHint: "telecom data management", 
+      tags: ["Hadoop", "Hive", "Sqoop", "Spark"] 
+    },
   ],
   nlp: [
-    { title: "Information Retrieval System from Scratch (NLP-Project-2024)", period: "March 2024 - May 2024", imageUrl: "https://picsum.photos/600/408", imageHint: "information retrieval nlp", tags: ["NLP", "Search", "Python"] },
-    { title: "Customization of AI-Content Generation for Social Media Influencer", period: "June 2025 - Aug 2025", imageUrl: "https://picsum.photos/600/409", imageHint: "ai content generation", tags: ["Generative AI", "LLMs"] },
-    { title: "Retrieval-Augmented Generation (RAG)", period: "N/A", imageUrl: "https://picsum.photos/600/410", imageHint: "rag system architecture", tags: ["RAG", "LLMs"] },
-    { title: "Sentiment Analysis", period: "N/A", imageUrl: "https://picsum.photos/600/411", imageHint: "sentiment analysis chart", tags: ["Sentiment Analysis", "NLP"] },
+    { 
+      title: "Custom AI Content Generator for Social Media", 
+      period: "Jun 2025 – Aug 2025",
+      description: "Built AI-powered content generation tool customized for influencers. Delivered multi-lingual, platform-specific post ideas.", 
+      imageUrl: "https://picsum.photos/600/409", 
+      imageHint: "ai content generation", 
+      tags: ["Python", "NLP", "LLM APIs", "Flask"] 
+    },
+    { 
+      title: "Retrieval-Augmented Generation (RAG)", 
+      period: "May 2025 – Present",
+      description: "Implemented RAG pipelines to combine retrieval systems with LLMs. Enhanced accuracy of AI responses by grounding in external data.",
+      imageUrl: "https://picsum.photos/600/410", 
+      imageHint: "rag system architecture", 
+      tags: ["Python", "LangChain", "FAISS", "Transformers", "Research"] 
+    },
+    { 
+      title: "Information Retrieval System (From Scratch)", 
+      period: "Mar 2024 – May 2024",
+      description: "Designed a search engine prototype with custom ranking algorithms. Experimented with TF-IDF, BM25, and semantic search.",
+      imageUrl: "https://picsum.photos/600/408", 
+      imageHint: "information retrieval nlp", 
+      tags: ["Python", "Elasticsearch", "NLP", "Research"] 
+    },
+    { 
+      title: "Sentiment Analysis on Text Data", 
+      period: "Feb 2025 – May 2025",
+      description: "Built models to classify positive/negative/neutral sentiment. Applied on Twitter datasets for social media opinion mining.",
+      imageUrl: "https://picsum.photos/600/411", 
+      imageHint: "sentiment analysis chart", 
+      tags: ["Python", "BERT", "HuggingFace Transformers"] 
+    },
   ],
 };
 
@@ -343,28 +444,45 @@ export default function PageClient() {
 
       {/* Projects Section */}
       <Section id="projects" title="Project Works" icon={<Rocket className="w-8 h-8" />} className="bg-background">
-        {(Object.keys(projects) as Array<keyof typeof projects>).map((category) => (
-            <div key={category} className="mb-16">
-                <h3 className="font-headline text-2xl font-bold mb-8 capitalize flex items-center gap-3">
-                    {category === 'ml' && <Brain className="w-6 h-6 text-primary" />}
-                    {category === 'dl' && <Cpu className="w-6 h-6 text-primary" />}
-                    {category === 'bigData' && <Database className="w-6 h-6 text-primary" />}
-                    {category === 'nlp' && <Bot className="w-6 h-6 text-primary" />}
-                    {category === 'ml' ? 'Machine Learning' : category === 'dl' ? 'Deep Learning' : category === 'bigData' ? 'Big Data' : 'NLP'} Projects
-                </h3>
-                <motion.div 
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.1 }}
-                >
-                  {projects[category].map((project, index) => (
-                    <ProjectCard key={index} title={project.title} description={`Period: ${project.period}`} imageUrl={project.imageUrl} imageHint={project.imageHint} tags={project.tags} />
-                  ))}
-                </motion.div>
-            </div>
-        ))}
+        <Tabs defaultValue="ml" className="w-full">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="ml">
+              <Brain className="mr-2 h-4 w-4" /> Machine Learning
+            </TabsTrigger>
+            <TabsTrigger value="dl">
+              <Cpu className="mr-2 h-4 w-4" /> Deep Learning
+            </TabsTrigger>
+            <TabsTrigger value="bigData">
+              <Database className="mr-2 h-4 w-4" /> Big Data
+            </TabsTrigger>
+            <TabsTrigger value="nlp">
+              <Bot className="mr-2 h-4 w-4" /> NLP
+            </TabsTrigger>
+          </TabsList>
+
+          {(Object.keys(projects) as Array<keyof typeof projects>).map((category) => (
+            <TabsContent key={category} value={category}>
+              <motion.div 
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+              >
+                {projects[category].map((project, index) => (
+                  <ProjectCard 
+                    key={index} 
+                    title={project.title} 
+                    description={project.description} 
+                    imageUrl={project.imageUrl} 
+                    imageHint={project.imageHint} 
+                    tags={project.tags} 
+                  />
+                ))}
+              </motion.div>
+            </TabsContent>
+          ))}
+        </Tabs>
       </Section>
       
       {/* Work Experience Section */}
@@ -421,13 +539,12 @@ export default function PageClient() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-3">
                          {edu.logoUrl && <Image src={edu.logoUrl} alt={`${edu.institution} logo`} width={24} height={24} className="h-6 w-6 object-contain"/>}
-                         {edu.degree}
+                         <a href={edu.institutionLink} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-primary">
+                            {edu.degree}
+                         </a>
                       </CardTitle>
                       <CardDescription>
-                        <a href={edu.institutionLink} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-primary">
-                          {edu.institution}
-                        </a>
-                        {' '}| {edu.period}
+                          {edu.institution} | {edu.period}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
