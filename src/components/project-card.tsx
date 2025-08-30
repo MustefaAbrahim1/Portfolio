@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { Github, Eye } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 type ProjectCardProps = {
   title: string;
@@ -30,49 +31,53 @@ export default function ProjectCard({
   imageUrl,
   imageHint,
   tags,
-  liveLink,
+  liveLink = "#",
+  sourceLink = "#",
 }: ProjectCardProps) {
-  const cardVariants = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0 },
-  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  }
 
   return (
     <motion.div
-      variants={cardVariants}
+      variants={itemVariants}
       whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
       className="h-full"
     >
-      <Card className="overflow-hidden h-full flex flex-col transition-shadow duration-300 hover:shadow-xl">
+      <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-xl dark:hover:shadow-primary/20 border-transparent hover:border-primary/50">
+        <div className="relative aspect-video w-full overflow-hidden">
+          <Image 
+            src={imageUrl} 
+            alt={title} 
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            data-ai-hint={imageHint}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
         <CardHeader>
           <CardTitle className="font-headline text-lg">{title}</CardTitle>
-          <CardDescription className="text-xs">{description}</CardDescription>
+          <CardDescription>{description}</CardDescription>
         </CardHeader>
-        <CardContent className="flex-grow flex flex-col">
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg border mb-4">
-            <Image 
-              src={imageUrl} 
-              alt={title} 
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              data-ai-hint={imageHint}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          <div className="mt-auto flex flex-wrap gap-2">
+        <CardContent className="flex-grow">
+          <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <Badge key={tag} variant="secondary">{tag}</Badge>
             ))}
           </div>
         </CardContent>
-        <CardFooter>
-          {liveLink && (
-            <Button asChild variant="default" className="w-full sm:w-auto">
-              <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                Live Preview <ArrowUpRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-          )}
+        <CardFooter className="flex items-center gap-4">
+          <Button asChild variant="outline" className="w-full">
+            <Link href={sourceLink} target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" /> Code
+            </Link>
+          </Button>
+          <Button asChild variant="default" className="w-full">
+            <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+              <Eye className="mr-2 h-4 w-4" /> Demo
+            </Link>
+          </Button>
         </CardFooter>
       </Card>
     </motion.div>

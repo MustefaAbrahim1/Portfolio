@@ -1,87 +1,41 @@
-import { Facebook, Mail, Linkedin, Github } from "lucide-react";
-
-function TelegramIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 2 11 13" />
-      <path d="M22 2 15 22 11 13 2 9 22 2z" />
-    </svg>
-  );
-}
-
-function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        >
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-        </svg>
-    );
-}
-
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    { name: 'GitHub', icon: Github, href: 'https://github.com' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
+    { name: 'Twitter', icon: Twitter, href: '#' },
+    { name: 'Mail', icon: Mail, href: 'mailto:example@example.com' },
+  ];
   return (
-    <footer id="contact" className="border-t bg-card text-card-foreground">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
-             <a href="/" className="flex items-center gap-2 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary"><path d="m12 19-7-5 7-5 7 5-7 5z"/><path d="m12 14-7-5 7-5 7 5-7 5z"/><path d="M19 10c0-2.2-3.1-4-7-4s-7 1.8-7 4"/><path d="m5 14 7 5 7-5"/></svg>
-                <span className="font-headline text-xl font-bold">DataWise</span>
-            </a>
-            <p className="text-sm text-muted-foreground">&copy; {currentYear} DataWise. All rights reserved.</p>
-          </div>
-          <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Service We provide</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">Data2Insight</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">Business Analyst</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">AI/ML Solution</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground">Content Creator</a></li>
-              </ul>
+    <footer className="bg-gradient-to-r from-[#0D1117] to-[#0A0D12] text-neutral-300">
+        <div className="container mx-auto px-4 md:px-6 py-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="text-center md:text-left">
+                    <h3 className="font-headline text-lg font-semibold text-white">Mustefa Abrahim</h3>
+                    <p className="text-sm">AI Engineer | Data Scientist | Motivator</p>
+                </div>
+                <div className="flex gap-4">
+                    {socialLinks.map((link) => (
+                        <a 
+                            key={link.name}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-neutral-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                            aria-label={link.name}
+                        >
+                            <link.icon className="h-6 w-6"/>
+                        </a>
+                    ))}
+                </div>
             </div>
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Social Media</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-foreground"><Facebook className="h-6 w-6" /></a>
-                <a href="#" className="text-muted-foreground hover:text-foreground"><TelegramIcon className="h-6 w-6" /></a>
-                <a href="#" className="text-muted-foreground hover:text-foreground"><WhatsAppIcon className="h-6 w-6" /></a>
-              </div>
+            <div className="mt-8 border-t border-neutral-800 pt-6 text-center text-sm text-neutral-500">
+                <p>&copy; {currentYear} Mustefa Abrahim. All rights reserved.</p>
             </div>
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Contact Us</h3>
-              <ul className="space-y-2">
-                <li><a href="mailto:example@example.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"><Mail className="h-4 w-4" /> Email</a></li>
-                <li><a href="https://linkedin.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"><Linkedin className="h-4 w-4" /> LinkedIn</a></li>
-                <li><a href="https://github.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"><Github className="h-4 w-4" /> GitHub</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
     </footer>
   );
 }

@@ -2,12 +2,28 @@ import type {Metadata} from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import MagicCursor from '@/components/magic-cursor';
+import { Poppins, Roboto } from 'next/font/google'
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Mustefa Abrahim | Portfolio',
   description: 'M.Tech Data Science @ IIT Madras | AI Researcher | DL Engineer | ML Engineer | Data Analyst',
 };
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+  weight: ['100', '300', '400', '500', '700', '900']
+});
+
 
 export default function RootLayout({
   children,
@@ -16,15 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
+      <body className={`${poppins.variable} ${roboto.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
