@@ -333,43 +333,36 @@ export default function PageClient() {
       
       {/* Work Experience Section */}
       <Section id="experience" title="Work Experience" icon={<Briefcase className="w-8 h-8" />} className="bg-muted">
-         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-border before:-translate-x-px md:before:mx-auto md:before:translate-x-0">
+         <motion.div 
+             className="grid grid-cols-1 md:grid-cols-2 gap-8"
+             variants={containerVariants}
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: true, amount: 0.2 }}
+         >
             {experiences.map((exp, index) => (
-              <motion.div 
-                key={index} 
-                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.8 }}
-              >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary bg-background text-primary group-odd:order-1 group-odd:group-first:translate-x-1/2 group-odd:group-last:translate-x-1/2 md:group-odd:order-none">
-                     <BriefcaseBusiness className="w-5 h-5"/>
-                  </div>
-                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
-                      <Card className="hover:shadow-lg transition-shadow">
-                          <CardHeader>
-                              <CardTitle className="text-lg">{exp.role}</CardTitle>
-                              <CardDescription>{exp.company}</CardDescription>
-                              <p className="text-xs text-muted-foreground pt-1">{exp.period}</p>
-                          </CardHeader>
-                          <CardContent>
-                            <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 mb-4">
-                                {exp.description.map((item, i) => (
-                                    <li key={i}>{item}</li>
-                                ))}
-                            </ul>
-                            <div className="flex flex-wrap gap-2">
-                                {exp.skills.map((skill, i) => (
-                                    <Badge key={i} variant="secondary">{skill}</Badge>
-                                ))}
-                            </div>
-                          </CardContent>
-                      </Card>
-                  </div>
+              <motion.div key={index} variants={itemVariants}>
+                  <Card className="h-full hover:shadow-lg transition-shadow">
+                      <CardHeader>
+                          <CardTitle className="text-lg">{exp.role}</CardTitle>
+                          <CardDescription>{exp.company} | {exp.period}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 mb-4">
+                            {exp.description.map((item, i) => (
+                                <li key={i}>{item}</li>
+                            ))}
+                        </ul>
+                        <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill, i) => (
+                                <Badge key={i} variant="secondary">{skill}</Badge>
+                            ))}
+                        </div>
+                      </CardContent>
+                  </Card>
               </motion.div>
             ))}
-        </div>
+        </motion.div>
       </Section>
       
       {/* Education Section */}
@@ -472,5 +465,3 @@ export default function PageClient() {
     </>
   );
 }
-
-    
