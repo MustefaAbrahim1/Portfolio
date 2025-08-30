@@ -45,12 +45,12 @@ const AnimatedText = () => {
 };
 
 const researchInterests = [
+    { text: "AI for Healthcare & Medical Imaging", icon: <BrainCircuit/> },
+    { text: "NLP (BERT, LLMs, RAG, Multi-Agent)", icon: <Bot/> },
+    { text: "Computer Vision & Generative AI", icon: <Eye/> },
+    { text: "AI for Business Decision Support", icon: <BriefcaseBusiness /> },
+    { text: "Big Data & Predictive Analytics", icon: <Database/> },
     { text: "Transfer Learning & Representation Learning", icon: <GitBranch/> },
-    { text: "Large Language Models (LLMs) & Transformers", icon: <Cpu/> },
-    { text: "Reinforcement Learning in AI Applications", icon: <Bot/> },
-    { text: "Causal Inference in Machine Learning", icon: <BarChart/> },
-    { text: "NLP models like BERT, GPT, and beyond", icon: <FileText/> },
-    { text: "AI for Medical Imaging & Healthcare Systems", icon: <BrainCircuit/> }
 ];
 
 const projects = {
@@ -350,11 +350,14 @@ const Section = ({ id, title, icon, children, className }: {id: string, title?: 
 )
 
 export default function PageClient() {
+  const aboutSkills = ["Python", "PyTorch", "TensorFlow", "NLP", "CV", "Data Viz"];
   return (
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-[#0d1117] via-[#10141b] to-teal-900/40 text-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-teal-500/10 opacity-50"></div>
+
         <div className="relative z-10 p-4">
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -388,64 +391,77 @@ export default function PageClient() {
         </div>
       </section>
 
-      {/* About Me Section */}
-      <Section id="about" className="bg-background">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-              >
-                  <div className="relative aspect-square w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
-                      <Image src="https://picsum.photos/500/500" alt="Mustefa Abrahim" layout="fill" objectFit="cover" data-ai-hint="professional portrait" />
-                  </div>
-              </motion.div>
-              <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                  <h2 className="font-headline text-3xl font-bold mb-4">About Me</h2>
-                  <p className="text-muted-foreground mb-6">
-                      I'm a data scientist and AI researcher with an M.Tech in Data Science and a B.Tech (Honor) in Computer Science. My passion lies at the intersection of Machine Learning, Deep Learning, NLP, Computer Vision, and their applications in Healthcare and Business Intelligence.
-                  </p>
-                  <div className="flex flex-wrap gap-4 text-sm">
-                      <div className="flex items-center gap-2"><Briefcase className="w-5 h-5 text-primary" /> <span>AI Engineer</span></div>
-                      <div className="flex items-center gap-2"><BrainCircuit className="w-5 h-5 text-secondary" /> <span>AI Research</span></div>
-                      <div className="flex items-center gap-2"><BookOpen className="w-5 h-5 text-accent" /> <span>Data Science</span></div>
-                  </div>
-              </motion.div>
-          </div>
-      </Section>
-      
-      {/* Research Interests Section */}
-      <Section id="research" title="Research Interests" icon={<BrainCircuit className="w-8 h-8" />} className="bg-muted">
-        <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-        >
-            {researchInterests.map((interest) => (
-                <motion.div key={interest.text} variants={itemVariants}>
-                    <Card className="h-full hover:border-primary transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                        <CardContent className="p-6 flex items-center gap-4">
-                            <div className="text-primary">{React.cloneElement(interest.icon, { className: "w-8 h-8"})}</div>
-                            <p className="font-semibold">{interest.text}</p>
-                        </CardContent>
-                    </Card>
-                </motion.div>
-            ))}
-        </motion.div>
-      </Section>
+      {/* About Me & Research Interests Section */}
+      <section id="about" className="relative py-24 md:py-32 bg-background overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://picsum.photos/1920/1080"
+            alt="Researcher at desk"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-20"
+            data-ai-hint="futuristic researcher desk"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-teal-900/20 mix-blend-multiply"></div>
+        </div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+            {/* About Me Panel */}
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8 }}
+            >
+                <div className="p-8 rounded-lg shadow-2xl bg-white/10 backdrop-blur-md border border-white/20">
+                    <h2 className="font-headline text-3xl font-bold mb-4 text-white">About Me</h2>
+                    <p className="text-neutral-300 mb-6">
+                      I'm Mustefa Abrahim, a Data Scientist & AI Engineer. My passion lies at the intersection of Machine Learning, Deep Learning, NLP, Computer Vision, and their applications in Healthcare and Business Intelligence.
+                    </p>
+                    <ul className="space-y-3 text-neutral-200 mb-6">
+                        <li className="flex items-center gap-3"><GraduationCap className="w-5 h-5 text-accent"/> <span>Data Science & AI (IIT Madras, India)</span></li>
+                        <li className="flex items-center gap-3"><Bot className="w-5 h-5 text-accent"/> <span>AI-powered Chatbots & Agents</span></li>
+                        <li className="flex items-center gap-3"><TrendingUp className="w-5 h-5 text-accent"/> <span>Big Data & Predictive Analytics</span></li>
+                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {aboutSkills.map(skill => <Badge key={skill} variant="secondary">{skill}</Badge>)}
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* Research Interests Panel */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div id="research" className="p-8 rounded-lg shadow-2xl bg-white/10 backdrop-blur-md border border-white/20">
+                  <h2 className="font-headline text-3xl font-bold mb-6 text-white">Research Interests</h2>
+                  <motion.ul 
+                      className="space-y-4"
+                      variants={containerVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                  >
+                      {researchInterests.map((interest) => (
+                          <motion.li key={interest.text} variants={itemVariants} className="flex items-center gap-4 text-neutral-200 font-medium">
+                              <div className="text-primary">{React.cloneElement(interest.icon, { className: "w-7 h-7"})}</div>
+                              <span>{interest.text}</span>
+                          </motion.li>
+                      ))}
+                  </motion.ul>
+              </div>
+            </motion.div>
+        </div>
+      </section>
 
       {/* Projects Section */}
       <Section id="projects" title="Project Works" icon={<Rocket className="w-8 h-8" />} className="bg-background">
         <Tabs defaultValue="ml" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
             <TabsTrigger value="ml">
               <Brain className="mr-2 h-4 w-4" /> Machine Learning
             </TabsTrigger>
