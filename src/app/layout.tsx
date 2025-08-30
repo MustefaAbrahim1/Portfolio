@@ -5,8 +5,8 @@ import MagicCursor from '@/components/magic-cursor';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Portfolio-Web',
-  description: 'A personal portfolio website showcasing projects and skills.',
+  title: 'Mustefa Abrahim | Portfolio',
+  description: 'M.Tech Data Science @ IIT Madras | AI Researcher | DL Engineer | ML Engineer | Data Analyst',
 };
 
 export default function RootLayout({

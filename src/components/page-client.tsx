@@ -5,27 +5,43 @@ import ProjectCard from "@/components/project-card";
 
 const projects = [
   {
-    title: "Project Alpha",
-    description: "A comprehensive project management tool designed for agile teams.",
+    title: "Customer Churn Prediction Using ML",
+    description: "Built an end-to-end classification pipeline using Random Forest and XGBoost to predict customer churn. Performed feature engineering, hyperparameter tuning, and model evaluation (AUC: 0.87).",
     imageUrl: "https://picsum.photos/600/400?random=1",
-    imageHint: "dashboard analytics",
-    tags: ["Next.js", "Firebase", "Tailwind CSS"],
+    imageHint: "machine learning churn",
+    tags: ["Python", "Scikit-learn", "XGBoost", "Matplotlib"],
     liveLink: "#",
   },
   {
-    title: "Project Beta",
-    description: "An e-commerce platform for bespoke furniture with a 3D customizer.",
+    title: "Diabetic Retinopathy Detection",
+    description: "Developed a CNN-based image classifier using transfer learning (EfficientNetB3) to detect diabetic retinopathy from fundus images. Achieved >90% validation accuracy.",
     imageUrl: "https://picsum.photos/600/400?random=2",
-    imageHint: "ecommerce furniture",
-    tags: ["React", "Three.js", "Stripe"],
+    imageHint: "deep learning healthcare",
+    tags: ["Python", "TensorFlow", "Keras", "OpenCV"],
     liveLink: "#",
   },
   {
-    title: "Project Gamma",
-    description: "A personal blog and portfolio website to showcase work and thoughts.",
+    title: "Text Sentiment Analyzer",
+    description: "Built a sentiment classification model for YouTube comments using DistilBERT. Includes text preprocessing, fine-tuning, and Streamlit-based deployment.",
     imageUrl: "https://picsum.photos/600/400?random=3",
-    imageHint: "blog portfolio",
-    tags: ["Next.js", "Framer Motion", "GenAI"],
+    imageHint: "nlp transformers",
+    tags: ["Python", "Hugging Face", "Streamlit", "NLTK"],
+    liveLink: "#",
+  },
+  {
+    title: "Sales Dashboard with Insights",
+    description: "Designed a dynamic Power BI dashboard that visualizes sales trends, profit margins, and customer demographics. Integrated SQL backend and Excel datasets.",
+    imageUrl: "https://picsum.photos/600/400?random=4",
+    imageHint: "dashboard analytics",
+    tags: ["Power BI", "SQL", "Excel"],
+    liveLink: "#",
+  },
+  {
+    title: "Real-Time Log Analytics",
+    description: "Developed a real-time analytics pipeline using Apache Kafka + Spark Streaming to monitor web server logs. Deployed on GCP with alerting system integration.",
+    imageUrl: "https://picsum.photos/600/400?random=5",
+    imageHint: "big data streaming",
+    tags: ["Apache Kafka", "Spark", "PySpark", "GCP"],
     liveLink: "#",
   },
 ];
@@ -50,10 +66,11 @@ export default function PageClient() {
         transition={{ duration: 0.8 }}
       >
         <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground/70">
-          Creative Developer & Digital Artisan
+          Mustefa Abrahim
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-          I craft elegant and efficient web experiences, blending cutting-edge technology with user-centric design to bring ideas to life, one line of code at a time.
+          M.Tech Data Science @ IIT Madras | AI Researcher | DL Engineer | ML Engineer | Data Analyst<br/>
+          Building the Future with AI, One Model at a Time.
         </p>
       </motion.section>
 
@@ -65,7 +82,7 @@ export default function PageClient() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          Featured Projects
+          Work Experience and Projects
         </motion.h2>
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
