@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "@/components/project-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { GraduationCap, Briefcase, Award, BookOpen, GitBranch, Cpu, Database, BrainCircuit, Bot, BarChart, FileText, CheckCircle, Brain, UserCog, BriefcaseBusiness, TrendingUp, Rocket, Download, Eye } from "lucide-react";
+import { GraduationCap, Briefcase, Award, BookOpen, GitBranch, Cpu, Database, BrainCircuit, Bot, BarChart, FileText, CheckCircle, Brain, UserCog, BriefcaseBusiness, TrendingUp, Rocket, Download, Eye, School } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -147,7 +147,9 @@ const experiences = [
 const educations = [
     { 
         degree: "M.Tech / M.Sc. in Data Science & AI", 
-        institution: "IIT Madras, India", 
+        institution: "IIT Madras, India",
+        institutionLink: "https://www.iitm.ac.in/",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png",
         period: "2022 – 2024",
         description: [
             "Specialized in Machine Learning, Deep Learning, Computer Vision, and NLP.",
@@ -158,7 +160,9 @@ const educations = [
     },
     { 
         degree: "B.Tech / B.Sc. (Hons) in Computer Science", 
-        institution: "KIIT University, India", 
+        institution: "KIIT University, India",
+        institutionLink: "https://kiit.ac.in/",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/KIIT_logo.svg/1200px-KIIT_logo.svg.png",
         period: "2018 – 2022",
         description: [
             "Achieved Highest CGPA: 3.84/4, graduating with Honors degree.",
@@ -169,7 +173,9 @@ const educations = [
     },
     { 
         degree: "B.Sc. in Software Engineering (1 Year)", 
-        institution: "Jigjiga University, Ethiopia", 
+        institution: "Jigjiga University, Ethiopia",
+        institutionLink: "https://www.jju.edu.et/",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/c/cb/Jigjiga_University_logo.png",
         period: "2016 – 2017",
         description: [
             "Completed Year-1 coursework in Software Engineering.",
@@ -408,13 +414,21 @@ export default function PageClient() {
             {educations.map((edu, index) => (
               <motion.div key={index} className="relative" variants={itemVariants}>
                 <div className="absolute -left-[37px] top-1.5 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <GraduationCap className="h-5 w-5" />
+                  <School className="h-5 w-5" />
                 </div>
                 <div className="pl-6">
                   <Card className="hover:shadow-lg transition-shadow">
                     <CardHeader>
-                      <CardTitle>{edu.degree}</CardTitle>
-                      <CardDescription>{edu.institution} | {edu.period}</CardDescription>
+                      <CardTitle className="flex items-center gap-3">
+                         {edu.logoUrl && <Image src={edu.logoUrl} alt={`${edu.institution} logo`} width={24} height={24} className="h-6 w-6 object-contain"/>}
+                         {edu.degree}
+                      </CardTitle>
+                      <CardDescription>
+                        <a href={edu.institutionLink} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-primary">
+                          {edu.institution}
+                        </a>
+                        {' '}| {edu.period}
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 mb-4">
