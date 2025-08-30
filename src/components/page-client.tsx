@@ -299,7 +299,6 @@ const certificates = [
 ];
 
 const successStories = [
-    "Double Scholar, hold honour degree",
     "Betra Science Scholar from Jigjiga University, Ethiopia to KIIT University India by MoE of Ethiopian",
     "Achieved Honor Degree in Computer Science with highest cgpa 3.84/4 from KIIT",
     "I2MP Scholar at IIT Madras which is number one NIRF and 200+ in QS Rank",
