@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -31,16 +32,16 @@ const AnimatedText = () => {
   }, [roles.length]);
 
   return (
-    <motion.div
-        key={roles[index]}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className="font-headline text-4xl md:text-6xl font-bold tracking-tighter"
-      >
-        <span className="gradient-text">{roles[index]}</span>
-    </motion.div>
+    <motion.h1
+      key={roles[index]}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      className="font-headline text-4xl md:text-6xl font-bold tracking-tighter"
+    >
+      <span className="gradient-text">{roles[index]}</span>
+    </motion.h1>
   );
 };
 
@@ -353,7 +354,7 @@ export default function PageClient() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-[#0d1117] via-[#10141b] to-teal-900/40 text-white overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-background via-[#0a0d12] to-teal-900/40 text-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-teal-500/10 opacity-50"></div>
 
@@ -363,9 +364,9 @@ export default function PageClient() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-                <h1 className="font-headline text-xl md:text-2xl font-light tracking-wide mb-4">
+                <h2 className="font-headline text-xl md:text-2xl font-light tracking-wide mb-4">
                   Hi, I’m Mustefa Abrahim
-                </h1>
+                </h2>
                 <AnimatedText />
                 <p className="max-w-2xl mx-auto mt-4 text-neutral-300">
                     Building the Future with AI, One Model at a Time
@@ -415,10 +416,10 @@ export default function PageClient() {
             >
                 <div className="p-8 rounded-lg shadow-2xl bg-white/10 backdrop-blur-md border border-white/20">
                     <h2 className="font-headline text-3xl font-bold mb-4 text-white">About Me</h2>
-                    <p className="text-neutral-300 mb-6">
+                    <p className="text-white mb-6">
                       I'm Mustefa Abrahim, a Data Scientist & AI Engineer. My passion lies at the intersection of Machine Learning, Deep Learning, NLP, Computer Vision, and their applications in Healthcare and Business Intelligence.
                     </p>
-                    <ul className="space-y-3 text-neutral-200 mb-6">
+                    <ul className="space-y-3 text-white mb-6">
                         <li className="flex items-center gap-3"><GraduationCap className="w-5 h-5 text-accent"/> <span>Data Science & AI (IIT Madras, India)</span></li>
                         <li className="flex items-center gap-3"><Bot className="w-5 h-5 text-accent"/> <span>AI-powered Chatbots & Agents</span></li>
                         <li className="flex items-center gap-3"><TrendingUp className="w-5 h-5 text-accent"/> <span>Big Data & Predictive Analytics</span></li>
@@ -446,7 +447,7 @@ export default function PageClient() {
                       viewport={{ once: true, amount: 0.2 }}
                   >
                       {researchInterests.map((interest) => (
-                          <motion.li key={interest.text} variants={itemVariants} className="flex items-center gap-4 text-neutral-200 font-medium">
+                          <motion.li key={interest.text} variants={itemVariants} className="flex items-center gap-4 text-white font-medium">
                               <div className="text-primary">{React.cloneElement(interest.icon, { className: "w-7 h-7"})}</div>
                               <span>{interest.text}</span>
                           </motion.li>
@@ -659,3 +660,6 @@ export default function PageClient() {
     </>
   );
 }
+
+
+    
