@@ -45,8 +45,8 @@ export default function ProjectCard({
     >
       <Card className="overflow-hidden h-full flex flex-col transition-shadow duration-300 hover:shadow-xl">
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
+          <CardTitle className="font-headline text-lg">{title}</CardTitle>
+          <CardDescription className="text-xs">{description}</CardDescription>
         </CardHeader>
         <CardContent className="flex-grow flex flex-col">
           <div className="relative aspect-video w-full overflow-hidden rounded-lg border mb-4">

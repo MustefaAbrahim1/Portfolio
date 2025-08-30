@@ -18,13 +18,13 @@ const AnimatedText = () => {
     "AI Research Enthusiast"
   ];
   const icons = [
-    <Handshake className="inline-block h-10 w-10 text-primary" />,
-    <Brain className="inline-block h-10 w-10 text-primary" />,
-    <UserCog className="inline-block h-10 w-10 text-primary" />,
-    <BriefcaseBusiness className="inline-block h-10 w-10 text-primary" />,
-    <TrendingUp className="inline-block h-10 w-10 text-primary" />,
-    <Bot className="inline-block h-10 w-10 text-primary" />,
-    <Rocket className="inline-block h-10 w-10 text-primary" />
+    <Handshake className="inline-block h-8 w-8 text-primary" />,
+    <Brain className="inline-block h-8 w-8 text-primary" />,
+    <UserCog className="inline-block h-8 w-8 text-primary" />,
+    <BriefcaseBusiness className="inline-block h-8 w-8 text-primary" />,
+    <TrendingUp className="inline-block h-8 w-8 text-primary" />,
+    <Bot className="inline-block h-8 w-8 text-primary" />,
+    <Rocket className="inline-block h-8 w-8 text-primary" />
   ];
 
   const [index, setIndex] = React.useState(0);
@@ -53,7 +53,7 @@ const AnimatedText = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
-        className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground/70"
+        className="font-headline text-4xl md:text-5xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground/70"
       >
         {roles[index]}
       </motion.span>
@@ -147,9 +147,9 @@ const containerVariants = {
 };
 
 const Section = ({ id, title, icon, children }: {id: string, title: string, icon: React.ReactNode, children: React.ReactNode}) => (
-    <section id={id} className="my-16 md:my-24">
+    <section id={id} className="my-12 md:my-20">
         <motion.h2 
-          className="font-headline text-3xl md:text-5xl font-bold text-center mb-12 flex items-center justify-center gap-4"
+          className="font-headline text-2xl md:text-4xl font-bold text-center mb-10 flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -163,20 +163,20 @@ const Section = ({ id, title, icon, children }: {id: string, title: string, icon
 
 export default function PageClient() {
   return (
-    <div className="container mx-auto px-4 md:px-6 py-8 md:py-16">
+    <div className="container mx-auto px-4 md:px-6 py-8">
       <motion.section 
-        className="text-center my-16 md:my-24 h-24 flex flex-col justify-center"
+        className="text-center my-12 md:my-20 h-24 flex flex-col justify-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-4">
+        <h1 className="font-headline text-2xl md:text-3xl font-bold tracking-tighter mb-4">
           Hi, Welcome to
         </h1>
         <AnimatedText />
       </motion.section>
 
-      <Section id="research-interests" title="Research Interests" icon={<BrainCircuit className="w-10 h-10" />}>
+      <Section id="research-interests" title="Research Interests" icon={<BrainCircuit className="w-8 h-8" />}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {researchInterests.map((interest, index) => (
                 <motion.div
@@ -188,8 +188,8 @@ export default function PageClient() {
                 >
                     <Card className="h-full">
                         <CardContent className="p-6 flex items-center gap-4">
-                            <div className="text-primary">{React.cloneElement(interest.icon, { className: "w-8 h-8"})}</div>
-                            <p className="font-semibold">{interest.text}</p>
+                            <div className="text-primary">{React.cloneElement(interest.icon, { className: "w-6 h-6"})}</div>
+                            <p className="font-semibold text-sm">{interest.text}</p>
                         </CardContent>
                     </Card>
                 </motion.div>
@@ -197,14 +197,14 @@ export default function PageClient() {
         </div>
       </Section>
 
-      <Section id="projects" title="Project / Research Works" icon={<BookOpen className="w-10 h-10" />}>
+      <Section id="projects" title="Project / Research Works" icon={<BookOpen className="w-8 h-8" />}>
         {(Object.keys(projects) as Array<keyof typeof projects>).map((category) => (
             <div key={category} className="mb-12">
-                <h3 className="font-headline text-2xl md:text-3xl font-bold mb-6 capitalize flex items-center gap-3">
-                    {category === 'ml' && <Brain className="w-8 h-8" />}
-                    {category === 'dl' && <Cpu className="w-8 h-8" />}
-                    {category === 'bigData' && <Database className="w-8 h-8" />}
-                    {category === 'nlp' && <Bot className="w-8 h-8" />}
+                <h3 className="font-headline text-xl md:text-2xl font-bold mb-6 capitalize flex items-center gap-3">
+                    {category === 'ml' && <Brain className="w-6 h-6" />}
+                    {category === 'dl' && <Cpu className="w-6 h-6" />}
+                    {category === 'bigData' && <Database className="w-6 h-6" />}
+                    {category === 'nlp' && <Bot className="w-6 h-6" />}
                     {category === 'ml' ? 'Machine Learning' : category === 'dl' ? 'Deep Learning' : category === 'bigData' ? 'Big Data' : 'NLP'} Projects
                 </h3>
                 <motion.div 
@@ -222,7 +222,7 @@ export default function PageClient() {
         ))}
       </Section>
       
-      <Section id="experience" title="Work / Professional Experience" icon={<Briefcase className="w-10 h-10" />}>
+      <Section id="experience" title="Work / Professional Experience" icon={<Briefcase className="w-8 h-8" />}>
          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-border before:-translate-x-px md:before:mx-auto md:before:translate-x-0">
             {experiences.map((exp, index) => (
               <motion.div 
@@ -239,9 +239,9 @@ export default function PageClient() {
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
                       <Card>
                           <CardHeader>
-                              <CardTitle>{exp.role}</CardTitle>
+                              <CardTitle className="text-base">{exp.role}</CardTitle>
                               <CardDescription>{exp.company}</CardDescription>
-                              <p className="text-sm text-muted-foreground">{exp.period}</p>
+                              <p className="text-xs text-muted-foreground">{exp.period}</p>
                           </CardHeader>
                       </Card>
                   </div>
@@ -250,7 +250,7 @@ export default function PageClient() {
         </div>
       </Section>
       
-      <Section id="education" title="Education" icon={<GraduationCap className="w-10 h-10" />}>
+      <Section id="education" title="Education" icon={<GraduationCap className="w-8 h-8" />}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {educations.map((edu, index) => (
                 <motion.div
@@ -262,9 +262,9 @@ export default function PageClient() {
                 >
                     <Card className="h-full">
                         <CardHeader>
-                            <CardTitle className="flex items-center gap-3"><GraduationCap className="w-6 h-6 text-primary"/>{edu.degree}</CardTitle>
+                            <CardTitle className="flex items-center gap-3 text-base"><GraduationCap className="w-5 h-5 text-primary"/>{edu.degree}</CardTitle>
                             <CardDescription>{edu.institution}</CardDescription>
-                            <p className="text-sm text-muted-foreground pt-2">{edu.period}</p>
+                            <p className="text-xs text-muted-foreground pt-2">{edu.period}</p>
                         </CardHeader>
                     </Card>
                 </motion.div>
@@ -272,7 +272,7 @@ export default function PageClient() {
         </div>
       </Section>
 
-      <Section id="certificates" title="Certificates" icon={<Award className="w-10 h-10" />}>
+      <Section id="certificates" title="Certificates" icon={<Award className="w-8 h-8" />}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certificates.map((cert, index) => (
                   <motion.div
@@ -284,11 +284,11 @@ export default function PageClient() {
                   >
                       <Card className="h-full">
                           <CardHeader>
-                              <CardTitle>{cert.title}</CardTitle>
+                              <CardTitle className="text-base">{cert.title}</CardTitle>
                               <CardDescription>{cert.provider} - {cert.date}</CardDescription>
                           </CardHeader>
                           <CardContent>
-                            <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-primary hover:underline">View Certificate</a>
+                            <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-primary hover:underline">View Certificate</a>
                           </CardContent>
                       </Card>
                   </motion.div>
@@ -296,7 +296,7 @@ export default function PageClient() {
           </div>
       </Section>
       
-      <Section id="success-stories" title="Success Stories" icon={<CheckCircle className="w-10 h-10" />}>
+      <Section id="success-stories" title="Success Stories" icon={<CheckCircle className="w-8 h-8" />}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {successStories.map((story, index) => (
                 <motion.div
@@ -309,7 +309,7 @@ export default function PageClient() {
                     <Card className="h-full">
                         <CardContent className="p-6 flex items-center gap-4">
                             <CheckCircle className="w-6 h-6 text-green-500"/>
-                            <p>{story}</p>
+                            <p className="text-sm">{story}</p>
                         </CardContent>
                     </Card>
                 </motion.div>
@@ -317,7 +317,7 @@ export default function PageClient() {
         </div>
       </Section>
       
-      <Section id="training" title="Training" icon={<Briefcase className="w-10 h-10" />}>
+      <Section id="training" title="Training" icon={<Briefcase className="w-8 h-8" />}>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {trainings.map((training, index) => (
                 <motion.div
@@ -329,9 +329,9 @@ export default function PageClient() {
                 >
                     <Card className="h-full">
                         <CardHeader>
-                            <CardTitle>{training.title}</CardTitle>
+                            <CardTitle className="text-base">{training.title}</CardTitle>
                             <CardDescription>{training.provider}</CardDescription>
-                            <p className="text-sm text-muted-foreground pt-2">{training.period}</p>
+                            <p className="text-xs text-muted-foreground pt-2">{training.period}</p>
                         </CardHeader>
                     </Card>
                 </motion.div>
@@ -339,7 +339,7 @@ export default function PageClient() {
         </div>
       </Section>
       
-      <Section id="publications" title="Publications" icon={<FileText className="w-10 h-10" />}>
+      <Section id="publications" title="Publications" icon={<FileText className="w-8 h-8" />}>
          <div className="grid grid-cols-1 gap-6">
             {publications.map((pub, index) => (
                 <motion.div
@@ -351,7 +351,7 @@ export default function PageClient() {
                 >
                     <Card>
                         <CardHeader>
-                            <CardTitle>{pub.title}</CardTitle>
+                            <CardTitle className="text-base">{pub.title}</CardTitle>
                             <CardDescription>Journal: {pub.journal}</CardDescription>
                              <Badge className="w-fit mt-2">{pub.status}</Badge>
                         </CardHeader>
