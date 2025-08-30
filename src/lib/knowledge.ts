@@ -17,11 +17,35 @@ export const knowledgeBase = `
 
 # Work / Professional Experience
 1.  **Business Data Analyst** - FINCRUX Technologies LLP, India (June 2023 – July 2023)
-2.  **Data Analysis and Visualization** - RBCDSAI Lab IIT Madras, India (June 2023 – Sept 2023)
-3.  **Energy Mentors** - Energy Mentors, USA, and IIT Ropar India (May 2023 – July 2023)
-4.  **Credit Card Fraud Detection** - CodeClause, India (Jun 2023 – July 2023)
-5.  **Software Development Intern** - Internshala, India (May 2021 - June 2021)
-6.  **Web Development Intern** - Internshala, India (Sept 2019 - Nov 2019)
+    - Conducted financial data analysis and prepared insights for investment decisions.
+    - Designed interactive dashboards to visualize market trends and risks.
+    - Collaborated with senior analysts on predictive modeling for portfolio optimization.
+    - Skills/Tools: Python, Pandas, Excel, Power BI, SQL, Financial Analytics
+2.  **Data Analysis & Visualization Intern** - RBCDSAI Lab, IIT Madras, India (June 2023 – Sept 2023)
+    - Analyzed large-scale datasets from AI/ML research projects.
+    - Developed visualization dashboards to track experiment performance.
+    - Contributed to research documentation for AI-driven insights.
+    - Skills/Tools: Python, Matplotlib, Seaborn, Tableau, Jupyter, Data Cleaning
+3.  **AI Research Intern** - Energy Mentors, USA & IIT Ropar, India (May 2023 – July 2023)
+    - Applied AI/ML models for energy optimization and forecasting.
+    - Processed large energy datasets to improve sustainability insights.
+    - Contributed to joint research publications in AI for energy systems.
+    - Skills/Tools: Python, TensorFlow, PyTorch, Scikit-learn, Data Engineering
+4.  **Credit Card Fraud Detection Project** - CodeClause, India (June 2023 – July 2023)
+    - Implemented machine learning algorithms to detect fraudulent transactions.
+    - Achieved high accuracy using imbalanced dataset handling & feature engineering.
+    - Delivered end-to-end data pipeline and model deployment.
+    - Skills/Tools: Python, Scikit-learn, Pandas, NumPy, Fraud Detection, ML Deployment
+5.  **Software Development Intern** - Internshala, India (May 2021 – June 2021)
+    - Built backend modules for student learning platform.
+    - Improved code efficiency and fixed bugs in live production codebase.
+    - Learned agile development and collaboration with remote teams.
+    - Skills/Tools: Java, MySQL, Git, REST APIs, Software Engineering
+6.  **Web Development Intern** - Internshala, India (Sept 2019 – Nov 2019)
+    - Designed and developed responsive web pages for client projects.
+    - Implemented front-end features improving user interaction.
+    - Gained practical exposure to real-world web development cycle.
+    - Skills/Tools: HTML, CSS, JavaScript, Bootstrap, PHP, Web Hosting
 
 # Project / Research Works
 
@@ -70,3 +94,5 @@ export const knowledgeBase = `
 - Business Analysis
 - Content Creation
 `;
+
+    

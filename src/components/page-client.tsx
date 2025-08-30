@@ -76,13 +76,74 @@ const projects = {
 };
 
 const experiences = [
-    { role: "Business Data Analyst", company: "FINCRUX Technologies LLP, India", period: "June 05, 2023 – July 05, 2023" },
-    { role: "Data Analysis and Visualization", company: "RBCDSAI Lab IIT Madras, India", period: "June 1, 2023 – Sept 30, 2023" },
-    { role: "Energy Mentors", company: "Energy Mentors, USA, and IIT Ropar India", period: "May 21, 2023 – July 24, 2023" },
-    { role: "Credit Card Fraud Detection", company: "CodeClause, India", period: "Jun 2023 – July 2023" },
-    { role: "Software Development Intern", company: "Internshala, India", period: "May 2021 - June 2021" },
-    { role: "Web Development Intern", company: "Internshala, India", period: "Sept 2019 - Nov 2019" },
+    { 
+        role: "Business Data Analyst", 
+        company: "FINCRUX Technologies LLP, India", 
+        period: "June 2023 – July 2023",
+        description: [
+            "Conducted financial data analysis and prepared insights for investment decisions.",
+            "Designed interactive dashboards to visualize market trends and risks.",
+            "Collaborated with senior analysts on predictive modeling for portfolio optimization."
+        ],
+        skills: ["Python", "Pandas", "Excel", "Power BI", "SQL", "Financial Analytics"]
+    },
+    { 
+        role: "Data Analysis & Visualization Intern", 
+        company: "RBCDSAI Lab, IIT Madras, India", 
+        period: "June 2023 – Sept 2023",
+        description: [
+            "Analyzed large-scale datasets from AI/ML research projects.",
+            "Developed visualization dashboards to track experiment performance.",
+            "Contributed to research documentation for AI-driven insights."
+        ],
+        skills: ["Python", "Matplotlib", "Seaborn", "Tableau", "Jupyter", "Data Cleaning"]
+    },
+    { 
+        role: "AI Research Intern", 
+        company: "Energy Mentors, USA & IIT Ropar, India", 
+        period: "May 2023 – July 2023",
+        description: [
+            "Applied AI/ML models for energy optimization and forecasting.",
+            "Processed large energy datasets to improve sustainability insights.",
+            "Contributed to joint research publications in AI for energy systems."
+        ],
+        skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Data Engineering"]
+    },
+    { 
+        role: "Credit Card Fraud Detection Project", 
+        company: "CodeClause, India", 
+        period: "June 2023 – July 2023",
+        description: [
+            "Implemented machine learning algorithms to detect fraudulent transactions.",
+            "Achieved high accuracy using imbalanced dataset handling & feature engineering.",
+            "Delivered end-to-end data pipeline and model deployment."
+        ],
+        skills: ["Python", "Scikit-learn", "Pandas", "NumPy", "Fraud Detection", "ML Deployment"]
+    },
+    { 
+        role: "Software Development Intern", 
+        company: "Internshala, India", 
+        period: "May 2021 – June 2021",
+        description: [
+            "Built backend modules for student learning platform.",
+            "Improved code efficiency and fixed bugs in live production codebase.",
+            "Learned agile development and collaboration with remote teams."
+        ],
+        skills: ["Java", "MySQL", "Git", "REST APIs", "Software Engineering"]
+    },
+    { 
+        role: "Web Development Intern", 
+        company: "Internshala, India", 
+        period: "Sept 2019 – Nov 2019",
+        description: [
+            "Designed and developed responsive web pages for client projects.",
+            "Implemented front-end features improving user interaction.",
+            "Gained practical exposure to real-world web development cycle."
+        ],
+        skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Web Hosting"]
+    },
 ];
+
 
 const educations = [
     { degree: "Master Degree in Data Science and AI", institution: "IIT Madras, India", period: "2022 – 2024" },
@@ -292,6 +353,18 @@ export default function PageClient() {
                               <CardDescription>{exp.company}</CardDescription>
                               <p className="text-xs text-muted-foreground pt-1">{exp.period}</p>
                           </CardHeader>
+                          <CardContent>
+                            <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 mb-4">
+                                {exp.description.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
+                            <div className="flex flex-wrap gap-2">
+                                {exp.skills.map((skill, i) => (
+                                    <Badge key={i} variant="secondary">{skill}</Badge>
+                                ))}
+                            </div>
+                          </CardContent>
                       </Card>
                   </div>
               </motion.div>
@@ -399,3 +472,5 @@ export default function PageClient() {
     </>
   );
 }
+
+    
