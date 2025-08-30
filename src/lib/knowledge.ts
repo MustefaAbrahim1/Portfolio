@@ -3,9 +3,19 @@ export const knowledgeBase = `
 👋 Hi, I'm Mustefa Abrahim! I'm a Data Scientist, AI Engineer, Business Analyst, Data Analyst, AI Agent Developer, and AI Research Enthusiastic. I have an M.Tech in Data Science from IIT Madras (2024) and a B.Tech (Honor) in CSE from KIIT (2022). My motto is "Building the Future with AI, One Model at a Time."
 
 # Education
-- Master Degree in Data Science and AI from IIT Madras, India (2022 – 2024)
-- Bachelor Degree (honour) in Computer science from KIIT, India (2018 – 2022)
-- Bachelor in Software Engineering from Jigjiga University, Ethiopia (2016-2017)
+- M.Tech / M.Sc. in Data Science & AI from IIT Madras, India (2022 – 2024)
+  - Specialized in Machine Learning, Deep Learning, Computer Vision, and NLP.
+  - Conducted publication-ready research in AI for Healthcare and Business Analytics.
+  - Completed capstone AI/ML projects on predictive modeling, large-scale data pipelines, and transformer-based NLP.
+  - Skills: Python, TensorFlow, PyTorch, Big Data
+- B.Tech / B.Sc. (Hons) in Computer Science from KIIT University, India (2018 – 2022)
+  - Achieved Highest CGPA: 3.84/4, graduating with Honors degree.
+  - Completed advanced coursework in Algorithms, Database Systems, Operating Systems, and Software Engineering.
+  - Built projects in AI, Web Development, and Cloud Computing.
+- B.Sc. in Software Engineering (1 Year) from Jigjiga University, Ethiopia (2016 – 2017)
+  - Completed Year-1 coursework in Software Engineering.
+  - Scored highest GPA: 3.79/4 in the 1st semester.
+  - Awarded Scholarship from Ministry of Education, Ethiopia for academic excellence.
 
 # Research Interests
 - Transfer Learning & Representation Learning
@@ -94,5 +104,3 @@ export const knowledgeBase = `
 - Business Analysis
 - Content Creation
 `;
-
-    

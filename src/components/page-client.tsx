@@ -30,16 +30,16 @@ const AnimatedText = () => {
   }, [roles.length]);
 
   return (
-    <motion.span
+    <motion.div
         key={roles[index]}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.5 }}
-        className="font-headline text-4xl md:text-6xl font-bold tracking-tighter gradient-text"
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        className="font-headline text-4xl md:text-6xl font-bold tracking-tighter"
       >
-        {roles[index]}
-    </motion.span>
+        <span className="gradient-text">{roles[index]}</span>
+    </motion.div>
   );
 };
 
@@ -144,11 +144,41 @@ const experiences = [
     },
 ];
 
-
 const educations = [
-    { degree: "Master Degree in Data Science and AI", institution: "IIT Madras, India", period: "2022 – 2024" },
-    { degree: "Bachelor Degree (honour) in Computer science", institution: "KIIT, India", period: "2018 – 2022" },
-    { degree: "Bachelor in Software Engineering", institution: "Jigjiga University, Ethiopia", period: "2016-2017" },
+    { 
+        degree: "M.Tech / M.Sc. in Data Science & AI", 
+        institution: "IIT Madras, India", 
+        period: "2022 – 2024",
+        description: [
+            "Specialized in Machine Learning, Deep Learning, Computer Vision, and NLP.",
+            "Conducted publication-ready research in AI for Healthcare and Business Analytics.",
+            "Completed capstone AI/ML projects on predictive modeling, large-scale data pipelines, and transformer-based NLP."
+        ],
+        skills: ["Python", "TensorFlow", "PyTorch", "Big Data"]
+    },
+    { 
+        degree: "B.Tech / B.Sc. (Hons) in Computer Science", 
+        institution: "KIIT University, India", 
+        period: "2018 – 2022",
+        description: [
+            "Achieved Highest CGPA: 3.84/4, graduating with Honors degree.",
+            "Completed advanced coursework in Algorithms, Database Systems, Operating Systems, and Software Engineering.",
+            "Built projects in AI, Web Development, and Cloud Computing."
+        ],
+        skills: ["Algorithms", "Databases", "Software Engineering"]
+    },
+    { 
+        degree: "B.Sc. in Software Engineering (1 Year)", 
+        institution: "Jigjiga University, Ethiopia", 
+        period: "2016 – 2017",
+        description: [
+            "Completed Year-1 coursework in Software Engineering.",
+            "Scored highest GPA: 3.79/4 in the 1st semester.",
+            "Awarded Scholarship from Ministry of Education, Ethiopia for academic excellence.",
+            "Later transferred to KIIT University, India, and completed the B.Sc. (Hons) in Computer Science."
+        ],
+        skills: ["Software Engineering Fundamentals"]
+    },
 ];
 
 const certificates = [
@@ -332,7 +362,7 @@ export default function PageClient() {
       </Section>
       
       {/* Work Experience Section */}
-      <Section id="experience" title="Work Experience" icon={<Briefcase className="w-8 h-8" />} className="bg-muted">
+       <Section id="experience" title="Work Experience" icon={<Briefcase className="w-8 h-8" />} className="bg-muted">
          <motion.div 
              className="grid grid-cols-1 md:grid-cols-2 gap-8"
              variants={containerVariants}
@@ -367,23 +397,41 @@ export default function PageClient() {
       
       {/* Education Section */}
       <Section id="education" title="Education" icon={<GraduationCap className="w-8 h-8" />} className="bg-background">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="relative pl-6 before:absolute before:top-0 before:left-6 before:bottom-0 before:w-px before:bg-border">
+          <motion.div 
+            className="space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {educations.map((edu, index) => (
-                <motion.div
-                    key={index}
-                    variants={itemVariants}
-                >
-                    <Card className="h-full">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-3"><GraduationCap className="w-6 h-6 text-primary"/>{edu.degree}</CardTitle>
-                            <CardDescription>{edu.institution}</CardDescription>
-                            <p className="text-sm text-muted-foreground pt-2">{edu.period}</p>
-                        </CardHeader>
-                    </Card>
-                </motion.div>
+              <motion.div key={index} className="relative" variants={itemVariants}>
+                <div className="absolute -left-[37px] top-1.5 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <GraduationCap className="h-5 w-5" />
+                </div>
+                <div className="pl-6">
+                  <Card className="hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <CardTitle>{edu.degree}</CardTitle>
+                      <CardDescription>{edu.institution} | {edu.period}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 mb-4">
+                          {edu.description.map((item, i) => <li key={i}>{item}</li>)}
+                      </ul>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.skills.map((skill, i) => <Badge key={i}>{skill}</Badge>)}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
             ))}
+          </motion.div>
         </div>
       </Section>
+
 
       {/* Publications Section */}
       <Section id="publications" title="Publications" icon={<FileText className="w-8 h-8" />} className="bg-muted">
