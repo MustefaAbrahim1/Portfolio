@@ -60,7 +60,7 @@ const projects = {
       title: "Stock Market Data Analysis using ML Algorithms", 
       period: "Feb 2022 – May 2023",
       description: "Developed ML models to analyze and predict stock price trends. Applied regression, time series forecasting, and ensemble methods for performance improvement.", 
-      imageUrl: "https://picsum.photos/600/400", 
+      imageUrl: "https://placehold.co/600x400/0D1117/FFFFFF/png?text=Stock+Analysis", 
       imageHint: "stock market analysis", 
       tags: ["Python", "Pandas", "Scikit-learn", "Statsmodels"] 
     },
@@ -68,7 +68,7 @@ const projects = {
       title: "Predictive Analytics for Health Insurance Sales", 
       period: "Jan 2023 – Mar 2023", 
       description: "Built predictive models for customer acquisition and sales forecasting. Identified key features driving insurance purchases.",
-      imageUrl: "https://picsum.photos/600/401", 
+      imageUrl: "https://placehold.co/600x400/007BFF/FFFFFF/png?text=Insurance+AI", 
       imageHint: "health insurance predictive", 
       tags: ["Python", "Random Forest", "XGBoost", "Power BI"] 
     },
@@ -76,7 +76,7 @@ const projects = {
       title: "Credit Card Fraud Detection using ML", 
       period: "Jun 2023 – Jul 2024", 
       description: "Designed ML pipelines to detect fraudulent transactions from imbalanced datasets. Achieved high recall and precision through feature engineering + resampling techniques.",
-      imageUrl: "https://picsum.photos/600/402", 
+      imageUrl: "https://placehold.co/600x400/C90000/FFFFFF/png?text=Fraud+Detection", 
       imageHint: "fraud detection security", 
       tags: ["Python", "Scikit-learn", "Imbalanced-learn", "Flask", "Research"] 
     },
@@ -86,7 +86,7 @@ const projects = {
       title: "Covid-19 Detection from Radiological Images", 
       period: "Jan 2021 – Jun 2022",
       description: "Built CNN models to classify X-ray/CT scans into Covid-positive/negative. Improved diagnosis support for radiologists with >85% accuracy.", 
-      imageUrl: "https://picsum.photos/600/403", 
+      imageUrl: "https://placehold.co/600x400/6C63FF/FFFFFF/png?text=Medical+Imaging", 
       imageHint: "covid detection medical", 
       tags: ["Python", "TensorFlow", "Keras", "OpenCV", "Research"] 
     },
@@ -94,7 +94,7 @@ const projects = {
       title: "Kidney Stone Detection from CT Scans", 
       period: "Jun 2023 – Jun 2024", 
       description: "Developed automated detection pipeline using CNN & image preprocessing. Achieved reliable classification for medical decision support.",
-      imageUrl: "https://picsum.photos/600/404", 
+      imageUrl: "https://placehold.co/600x400/6C63FF/FFFFFF/png?text=CT+Scan+AI", 
       imageHint: "kidney stone detection", 
       tags: ["Python", "TensorFlow", "Image Processing", "Research"] 
     },
@@ -102,7 +102,7 @@ const projects = {
       title: "Image-to-Image Translation with GANs", 
       period: "Nov 2023 – Dec 2024",
       description: "Converted RGB → Thermal images using generative models (CycleGAN, cGAN). Enhanced computer vision applications in surveillance and medical imaging.", 
-      imageUrl: "https://picsum.photos/600/405", 
+      imageUrl: "https://placehold.co/600x400/00C9A7/FFFFFF/png?text=GANs", 
       imageHint: "image translation gan", 
       tags: ["PyTorch", "CycleGAN", "cGAN", "Research"] 
     },
@@ -110,7 +110,7 @@ const projects = {
       title: "Realistic Image Generation using Diffusion Models", 
       period: "Aug 2023 – Sept 2024",
       description: "Trained diffusion models to generate realistic hair follicle images. Contributed to medical research dataset augmentation.", 
-      imageUrl: "https://picsum.photos/600/406", 
+      imageUrl: "https://placehold.co/600x400/00C9A7/FFFFFF/png?text=Diffusion+Models", 
       imageHint: "image generation diffusion", 
       tags: ["PyTorch", "Diffusion Models", "Generative AI", "Research"] 
     },
@@ -120,7 +120,7 @@ const projects = {
       title: "NYC Parking Tickets Prediction", 
       period: "Feb 2023 – May 2023",
       description: "Processed 10M+ records to predict parking violations. Leveraged Spark ML pipelines for scalable predictions.",
-      imageUrl: "https://picsum.photos/600/407", 
+      imageUrl: "https://placehold.co/600x400/F8B400/FFFFFF/png?text=Big+Data+NYC", 
       imageHint: "big data nyc", 
       tags: ["PySpark", "Hadoop", "Spark ML"] 
     },
@@ -128,7 +128,7 @@ const projects = {
       title: "Hashing in Hadoop Distributed File System", 
       period: "Jan 2023 – Feb 2023",
       description: "Implemented efficient hashing techniques for data distribution. Optimized HDFS performance in large-scale data handling.",
-      imageUrl: "https://picsum.photos/600/412", 
+      imageUrl: "https://placehold.co/600x400/F8B400/FFFFFF/png?text=Hadoop", 
       imageHint: "hadoop distributed file", 
       tags: ["Hadoop", "Java", "MapReduce"] 
     },
@@ -136,7 +136,7 @@ const projects = {
       title: "Subscriber Data Management", 
       period: "Nov 2023 – Dec 2023",
       description: "Designed Big Data pipelines for telecom subscriber analytics. Handled ingestion, cleaning, and transformation for large-scale user datasets.",
-      imageUrl: "https://picsum.photos/600/413", 
+      imageUrl: "https://placehold.co/600x400/F8B400/FFFFFF/png?text=Data+Pipelines", 
       imageHint: "telecom data management", 
       tags: ["Hadoop", "Hive", "Sqoop", "Spark"] 
     },
@@ -146,7 +146,7 @@ const projects = {
       title: "Custom AI Content Generator for Social Media", 
       period: "Jun 2025 – Aug 2025",
       description: "Built AI-powered content generation tool customized for influencers. Delivered multi-lingual, platform-specific post ideas.", 
-      imageUrl: "https://picsum.photos/600/409", 
+      imageUrl: "https://placehold.co/600x400/3B5998/FFFFFF/png?text=AI+Content", 
       imageHint: "ai content generation", 
       tags: ["Python", "NLP", "LLM APIs", "Flask"] 
     },
@@ -154,7 +154,7 @@ const projects = {
       title: "Retrieval-Augmented Generation (RAG)", 
       period: "May 2025 – Present",
       description: "Implemented RAG pipelines to combine retrieval systems with LLMs. Enhanced accuracy of AI responses by grounding in external data.",
-      imageUrl: "https://picsum.photos/600/410", 
+      imageUrl: "https://placehold.co/600x400/1DA1F2/FFFFFF/png?text=RAG+System", 
       imageHint: "rag system architecture", 
       tags: ["Python", "LangChain", "FAISS", "Transformers", "Research"] 
     },
@@ -162,7 +162,7 @@ const projects = {
       title: "Information Retrieval System (From Scratch)", 
       period: "Mar 2024 – May 2024",
       description: "Designed a search engine prototype with custom ranking algorithms. Experimented with TF-IDF, BM25, and semantic search.",
-      imageUrl: "https://picsum.photos/600/408", 
+      imageUrl: "https://placehold.co/600x400/FF6F61/FFFFFF/png?text=Search+Engine", 
       imageHint: "information retrieval nlp", 
       tags: ["Python", "Elasticsearch", "NLP", "Research"] 
     },
@@ -170,7 +170,7 @@ const projects = {
       title: "Sentiment Analysis on Text Data", 
       period: "Feb 2025 – May 2025",
       description: "Built models to classify positive/negative/neutral sentiment. Applied on Twitter datasets for social media opinion mining.",
-      imageUrl: "https://picsum.photos/600/411", 
+      imageUrl: "https://placehold.co/600x400/FFD700/000000/png?text=Sentiment+Analysis", 
       imageHint: "sentiment analysis chart", 
       tags: ["Python", "BERT", "HuggingFace Transformers"] 
     },
@@ -395,11 +395,10 @@ export default function PageClient() {
       <section id="about" className="relative py-24 md:py-32 bg-background overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://picsum.photos/1920/1080"
+            src="https://placehold.co/1920x1080/0D1117/FFFFFF/png?text=Researcher+Desk"
             alt="Researcher at desk"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-20"
+            fill
+            className="opacity-20 object-cover"
             data-ai-hint="futuristic researcher desk"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
@@ -662,4 +661,5 @@ export default function PageClient() {
 }
 
 
+    
     

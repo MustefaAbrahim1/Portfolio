@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -54,10 +55,10 @@ export default function ProjectCard({
           <Image 
             src={imageUrl} 
             alt={title} 
-            fill
+            width={600}
+            height={400}
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             data-ai-hint={imageHint}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <CardHeader>
@@ -94,3 +95,5 @@ export default function ProjectCard({
     </motion.div>
   );
 }
+
+    
