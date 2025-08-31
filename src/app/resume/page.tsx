@@ -10,11 +10,11 @@ export default function Resume() {
       <main className="flex-grow container mx-auto px-4 md:px-6 py-12">
         <Card className="max-w-4xl mx-auto p-4 sm:p-8">
             <header className="text-center mb-8">
-                <h1 className="font-headline text-4xl font-bold">Mustefa Abrahim</h1>
-                <p className="text-lg text-muted-foreground">AI Researcher | DL/ML Engineer | Data Analyst</p>
+                <h1 className="font-headline text-4xl font-bold">Mustefa Abrahim Usman</h1>
+                <p className="text-lg text-muted-foreground">Data Scientist | AI Researcher | DL/ML Engineer</p>
                 <div className="flex justify-center gap-4 mt-4 text-sm">
                     <a href="mailto:mustefa.au@gmail.com" className="flex items-center gap-2 hover:text-primary"><Mail className="w-4 h-4"/> mustefa.au@gmail.com</a>
-                    <a href="#" className="flex items-center gap-2 hover:text-primary"><Phone className="w-4 h-4"/> +1 (123) 456-7890</a>
+                    <a href="#" className="flex items-center gap-2 hover:text-primary"><Phone className="w-4 h-4"/> +251-901-563-815</a>
                     <a href="https://www.linkedin.com/in/mustefa-abrahim/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Linkedin className="w-4 h-4"/> LinkedIn</a>
                     <a href="https://github.com/MustefaAbrahim1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Github className="w-4 h-4"/> GitHub</a>
                 </div>
@@ -23,28 +23,78 @@ export default function Resume() {
             <section className="mb-8">
                 <h2 className="font-headline text-2xl font-bold mb-4 border-b pb-2 flex items-center gap-2"><BrainCircuit className="w-6 h-6 text-primary"/> Summary</h2>
                 <p className="text-muted-foreground">
-                    Results-driven Data Scientist and AI Researcher with an M.Tech in Data Science from IIT Madras. Passionate about leveraging Machine Learning, Deep Learning, and NLP to solve complex problems in healthcare and business intelligence. Proven ability to lead projects from concept to deployment.
+                Results-driven Data Scientist and AI Researcher with a master's degree in Data Science and artificial intelligence from IIT Madras. Passionate about leveraging Machine Learning, Deep Learning, and NLP to solve complex problems in healthcare and business intelligence. Proven ability to lead projects from concept to deployment. 
                 </p>
             </section>
 
+            {/* Experience Section */}
             <section className="mb-8">
-                <h2 className="font-headline text-2xl font-bold mb-4 border-b pb-2 flex items-center gap-2"><Briefcase className="w-6 h-6 text-primary"/> Experience</h2>
+                <h2 className="font-headline text-2xl font-bold mb-4 border-b pb-2 flex items-center gap-2">
+                  <Briefcase className="w-6 h-6 text-primary"/> Experience
+                </h2>
+
                 <div className="space-y-4">
-                    <div>
-                        <h3 className="font-bold text-lg">Data Analysis and Visualization</h3>
-                        <p className="text-sm text-muted-foreground">RBCDSAI Lab IIT Madras, India | June 2023 – Sept 2023</p>
-                    </div>
-                     <div>
-                        <h3 className="font-bold text-lg">Business Data Analyst</h3>
-                        <p className="text-sm text-muted-foreground">FINCRUX Technologies LLP, India | June 2023 – July 2023</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold text-lg">Energy Mentors</h3>
-                        <p className="text-sm text-muted-foreground">Energy Mentors, USA, and IIT Ropar India | May 2023 – July 2023</p>
-                    </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Data Analysis and Visualization</h3>
+                    <p className="text-sm text-muted-foreground">RBCDSAI Lab IIT Madras, India | June 2023 – Sept 2023</p>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                      <li>Collected, cleaned, and analyzed large public health datasets, integrating feedback from multiple government sources.</li>
+                      <li>Integrated and cleaned data from multiple sources to generate unified views of program performance.</li>
+                      <li>Developed feedback dashboards using Power BI, enhancing visibility of issues and informing corrective action plans.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg">Business Data Analyst</h3>
+                    <p className="text-sm text-muted-foreground">FINCRUX Technologies LLP, India | June 2023 – July 2023</p>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                      <li>Designed and implemented end-to-end machine learning solutions for customer segmentation, lead scoring, and churn prediction across multiple clients, including Airbnb, Yes Bank, and P&G.</li>
+                      <li>Built dynamic Power BI dashboards to visualize KPIs and model outputs, enabling stakeholders to gain actionable insights.</li>
+                      <li>Used Python and SQL for preprocessing, training, and evaluating models, reducing manual intervention and increasing accuracy of strategic planning.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg">Data Analyst – Fraud & Risk Detection Project</h3>
+                    <p className="text-sm text-muted-foreground">CodeClause, India | May 2023 – July 2023</p>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                      <li>Built interactive reports showing fraud detection patterns using logistic regression insights.</li>
+                      <li>Used Python for anomaly detection and data visualization in financial transaction datasets.</li>
+                      <li>Ensured that dashboard outputs supported compliance, tracking, and audit functions.</li>
+                    </ul>
+                  </div>
                 </div>
             </section>
-            
+
+            {/* Projects Section */}
+            <section className="mb-8">
+              <h2 className="font-headline text-2xl font-bold mb-4 border-b pb-2 flex items-center gap-2">
+                <Star className="w-6 h-6 text-primary"/> Projects
+              </h2>
+
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-bold text-lg">Kidney Stone Detection from CT-Scan Images using DL</h3>
+                  <p className="text-sm text-muted-foreground">Personal/Research Project | 2023</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                    <li>Developed a deep learning model to detect kidney stones from CT-scan images with high accuracy.</li>
+                    <li>Preprocessed and augmented medical images for improved model generalization.</li>
+                    <li>Visualized model predictions using heatmaps to aid interpretability for clinicians.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-lg">COVID-19 Detection from Radiological Images using DL</h3>
+                  <p className="text-sm text-muted-foreground">Personal/Research Project | 2023</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                    <li>Built a convolutional neural network to classify COVID-19 from X-ray and CT images.</li>
+                    <li>Implemented preprocessing pipelines including normalization, resizing, and augmentation.</li>
+                    <li>Achieved high sensitivity and specificity while providing visual explanations using Grad-CAM.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
             <section className="mb-8">
                 <h2 className="font-headline text-2xl font-bold mb-4 border-b pb-2 flex items-center gap-2"><Code className="w-6 h-6 text-primary"/> Skills</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
