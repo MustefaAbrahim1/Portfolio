@@ -54,10 +54,8 @@ Clients & Industry → To see how I apply AI, ML, and Data Science to solve real
 
 📂 Explore the code in this repo for portfolio structure & design.
 
-🌍 Live Portfolio Website (link).
+🌍 Live Portfolio Website (https://mustefa-web.vercel.app).
 
-📧 Contact: (your professional email).
+📧 Contact: (mustefa.au@gmail.com).
 
 ✨ This portfolio is more than just a website — it’s a professional, research-driven profile showcasing how I turn data, code, and AI into real-world impact.
-
-Contact me: mustefa.au@gmail.com
