@@ -54,7 +54,7 @@ Clients & Industry → To see how I apply AI, ML, and Data Science to solve real
 
 📂 Explore the code in this repo for portfolio structure & design.
 
-🌍 Live Portfolio Website ([link]([url](https://mustefa-aiweb.vercel.app))).
+🌍 Live Portfolio Website ([link]([https://mustefa-aiweb.vercel.app])).
 
 📧 Contact: (mustefa.au@gmail.com).
 
